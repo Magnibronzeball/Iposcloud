@@ -25,6 +25,12 @@
             <artifactId>spring-boot-admin-server-ui</artifactId>
             <version>1.4.5</version>
         </dependency>
+
+        <!-- eureka　客户端 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

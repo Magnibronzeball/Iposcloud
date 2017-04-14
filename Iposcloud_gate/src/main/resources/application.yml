@@ -8,11 +8,10 @@ spring:
        serviceId: iposcloudregistry
 server:
   port: 8080
- 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://admin:admin@iposcloudregistry:8761/eureka/， http://admin:admin@iposcloudregistry:876/eureka/
+      defaultZone: http://admin:admin@iposcloudregistry:8761/eureka/
 
 # 设置默认超时时间60s（default为全局；若设置某项服务的超时时间，只需要将default替换为对应的服务名）
 hystrix:
@@ -27,3 +26,21 @@ logging:
   level:
     ROOT: INFO
     org.springframework.web: INFO
+
+
+
+######################################################################
+#是否使用注册中心
+ribbon:
+  eureka:
+    enabled: true
+#配置在配置文件中的路由信息
+zuul:
+  routes:
+    servicedemo:
+      serviceId: ServiceDemo
+      path: /servicedemo/**
+  prefix: /iposcloudgate
+
+
+
