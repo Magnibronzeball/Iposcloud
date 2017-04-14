@@ -67,6 +67,12 @@
             <version>${mapstruct.version}</version>
         </dependency>
 
+        <!-- eureka　客户端 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+
 
     </dependencies>
 
