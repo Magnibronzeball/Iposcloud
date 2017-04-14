@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Iposcloud_admin" />
+        <module name="Iposcloud_gate" />
+        <module name="Iposcloud_registry" />
+        <module name="ServiceDemo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Iposcloud" target="1.8" />
+      <module name="Iposcloud_admin" target="1.8" />
+      <module name="Iposcloud_gate" target="1.8" />
+      <module name="Iposcloud_registry" target="1.8" />
+      <module name="ServiceDemo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

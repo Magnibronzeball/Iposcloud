@@ -1,0 +1,45 @@
+server:
+    port: 8761
+logging:
+  level:
+   root: info
+spring:
+    application:
+        name: iposcloudregistry
+    profiles:
+      active: native
+####################################################################################################################################################
+#configserver
+    cloud:
+      config:
+        server:
+          native:
+            searchLocations: classpath:/config
+          prefix: /config
+        uri: http://127.0.0.1:8761
+####################################################################################################################################################
+#简单密码认证
+security:
+    basic:
+      enabled: true
+    user:
+      name: admin
+      password: admin
+      #ignored: /eureka/**/*.{js,css}
+####################################################################################################################################################
+#hostname需设置/etc/hosts的IP映射
+eureka:
+    server:
+      enable-self-preservation: false
+    instance:
+        hostname: iposcloudregistry
+    client:
+        service-url:
+          defaultZone: http://admin:admin@iposcloudregistry:8761/eureka/
+        healthcheck:
+          enabled: true
+    dashboard:
+        path: /registry
+
+
+

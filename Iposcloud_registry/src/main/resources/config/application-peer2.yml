@@ -1,0 +1,33 @@
+#Eureka 应用名称
+spring:
+    application:
+        name: iposcloudregistry
+    #configserver
+    cloud:
+      config:
+        server:
+          native:
+            searchLocations: classpath:/config
+        uri: http://iposcloudregistry-peer-2:8762
+#Eureka 服务端口
+server:
+    port: 8762
+#简单密码认证
+security:
+    basic:
+      enabled: true
+    user:
+      name: admin
+      password: admin
+      ignored: /eureka/**/*.{js,css}
+#hostname需设置/etc/hosts的IP映射
+eureka:
+    instance:
+        hostname: iposcloudregistry-peer-2
+    client:
+        service-url:
+          defaultZone: http://admin:admin@iposcloudregistry-peer-1:8761/eureka/,http://admin:admin@iposcloudregistry-peer-2:8762/eureka/
+        healthcheck:
+          enabled: true
+    dashboard:
+        path: /registry

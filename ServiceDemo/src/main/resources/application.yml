@@ -1,0 +1,18 @@
+spring:
+  boot:
+    admin:
+      url: http://localhost:8090
+      client:
+        enabled: true
+  application:
+    name: ServiceDemo
+server:
+  port: 8080
+logging:
+  level:
+   root: debug
+#eureka:
+#  instance:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://admin:admin@localhost:8761/eureka/
